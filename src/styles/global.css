@@ -1,0 +1,42 @@
+@import "./theme.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--fondo-pagina);
+  color: var(--texto);
+  font-family: var(--fuente-texto);
+  font-size: 14px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fuente-titulos);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+button,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Recharts: tooltips y textos de ejes con la tipografía del dashboard */
+.recharts-text,
+.recharts-legend-item-text {
+  font-family: var(--fuente-texto);
+}

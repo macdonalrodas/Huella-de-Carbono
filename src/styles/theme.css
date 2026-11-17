@@ -1,0 +1,56 @@
+/* =========================================================
+   Paleta y tokens de diseño (definidos en la Fase 2)
+   Todos los componentes usan estas variables: si un color
+   cambia aquí, cambia en todo el dashboard.
+   ========================================================= */
+:root {
+  /* Paleta principal */
+  --verde-bosque: #0b5d45;
+  --azul: #0072b2;
+  --naranja: #d55e00;
+  --gris-pizarra: #4a5568;
+
+  /* Paleta secundaria */
+  --ambar: #e69f00;
+  --azul-cielo: #56b4e9;
+  --rosa: #cc79a7;
+
+  /* Tintes derivados (para fondos, áreas y barras apiladas) */
+  --verde-medio: #6fa58f;
+  --verde-claro: #b9d3c7;
+  --verde-fondo: #e7f0ec;
+  --naranja-fondo: #fbe9dd;
+  --azul-fondo: #e3f0f8;
+
+  /* Escala secuencial del mapa (CO2 per cápita, menor → mayor) */
+  --mapa-1: #fdf0d5;
+  --mapa-2: #f6c86b;
+  --mapa-3: #e69f00;
+  --mapa-4: #d55e00;
+  --mapa-5: #8c3a0e;
+  --mapa-sin-datos: #cbd2d9;
+
+  /* Significado de colores */
+  --color-reduccion: var(--azul);
+  --color-aumento: var(--naranja);
+
+  /* Neutros de interfaz */
+  --fondo-pagina: #f3f5f4;
+  --fondo-tarjeta: #ffffff;
+  --texto: #1a202c;
+  --texto-secundario: var(--gris-pizarra);
+  --texto-tenue: #8a94a3;
+  --borde: #e2e8f0;
+  --rejilla: #edf0f3;
+
+  /* Tipografía */
+  --fuente-titulos: "Manrope", system-ui, sans-serif;
+  --fuente-texto: "Inter", system-ui, sans-serif;
+
+  /* Forma y espacio */
+  --radio: 16px;
+  --radio-chico: 8px;
+  --sombra: 0 1px 2px rgba(16, 24, 40, 0.04), 0 4px 16px rgba(16, 24, 40, 0.05);
+  --espacio: 24px;
+  --ancho-max: 1440px;
+}

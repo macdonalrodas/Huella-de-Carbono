@@ -1,0 +1,103 @@
+.barra {
+  background: var(--fondo-tarjeta);
+  border-bottom: 1px solid var(--borde);
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* por encima del mapa de Leaflet */
+}
+
+.contenido {
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+  padding: 12px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.grupo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.selector {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-chico);
+  padding: 6px 12px 4px;
+  min-width: 124px;
+  background: #fff;
+}
+
+.selector:focus-within {
+  border-color: var(--verde-bosque);
+  box-shadow: 0 0 0 3px var(--verde-fondo);
+}
+
+.ancho {
+  min-width: 220px;
+}
+
+.etiqueta {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--texto-tenue);
+}
+
+.selector select {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  padding: 2px 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.restablecer {
+  border: none;
+  background: none;
+  color: var(--texto-secundario);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: var(--radio-chico);
+  font-size: 13px;
+}
+
+.restablecer:hover {
+  background: var(--fondo-pagina);
+  color: var(--texto);
+}
+
+.insignia {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--borde);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 12px;
+  color: var(--texto-secundario);
+}
+
+.punto {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--verde-bosque);
+}
+
+@media (max-width: 720px) {
+  .contenido {
+    padding: 12px 20px;
+  }
+  .barra {
+    position: static;
+  }
+}

@@ -1,0 +1,42 @@
+.tarjeta {
+  background: var(--fondo-tarjeta);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: 26px 28px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* evita que los gráficos desborden la cuadrícula */
+}
+
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.titulo {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.subtitulo {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: var(--texto-secundario);
+}
+
+.etiqueta {
+  background: var(--fondo-pagina);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 11px;
+  color: var(--texto-secundario);
+  white-space: nowrap;
+}
+
+.cuerpo {
+  flex: 1;
+  min-height: 0;
+}
