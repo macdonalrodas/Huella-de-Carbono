@@ -1,0 +1,47 @@
+{
+  "periodo": [
+    2010,
+    2023
+  ],
+  "top5": [
+    {
+      "iso3": "CHN",
+      "pais": "China",
+      "co2_mt": 144547.18
+    },
+    {
+      "iso3": "USA",
+      "pais": "United States",
+      "co2_mt": 73634.81
+    },
+    {
+      "iso3": "IND",
+      "pais": "India",
+      "co2_mt": 32723.48
+    },
+    {
+      "iso3": "RUS",
+      "pais": "Russia",
+      "co2_mt": 23348.07
+    },
+    {
+      "iso3": "JPN",
+      "pais": "Japan",
+      "co2_mt": 16303.79
+    }
+  ],
+  "mayor_mejora": {
+    "pais": "Finland",
+    "iso3": "FIN",
+    "variacion_pct": -50.39,
+    "co2_inicio_mt": 64.09,
+    "co2_fin_mt": 31.8
+  },
+  "umbral_mt_mejora": 50,
+  "excluidos_mejora": [
+    "UKR",
+    "SYR",
+    "VEN"
+  ],
+  "paises_desacoplados": 49
+}

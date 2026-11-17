@@ -1,0 +1,114 @@
+[
+  {
+    "anio":2010,
+    "China":8610.05,
+    "India":1678.53,
+    "Japan":1211.09,
+    "Russia":1633.15,
+    "United States":5669.25
+  },
+  {
+    "anio":2011,
+    "China":9520.15,
+    "India":1765.69,
+    "Japan":1261.18,
+    "Russia":1684.99,
+    "United States":5538.97
+  },
+  {
+    "anio":2012,
+    "China":9767.31,
+    "India":1926.99,
+    "Japan":1302.11,
+    "Russia":1700.1,
+    "United States":5331.47
+  },
+  {
+    "anio":2013,
+    "China":9942.37,
+    "India":1995.34,
+    "Japan":1311.88,
+    "Russia":1637.55,
+    "United States":5473.44
+  },
+  {
+    "anio":2014,
+    "China":9976.03,
+    "India":2148.05,
+    "Japan":1260.27,
+    "Russia":1637.31,
+    "United States":5531.39
+  },
+  {
+    "anio":2015,
+    "China":9858.04,
+    "India":2231.82,
+    "Japan":1219.98,
+    "Russia":1635.24,
+    "United States":5368.5
+  },
+  {
+    "anio":2016,
+    "China":9748.17,
+    "India":2352.54,
+    "Japan":1199.93,
+    "Russia":1629.33,
+    "United States":5245.36
+  },
+  {
+    "anio":2017,
+    "China":10000.01,
+    "India":2425.72,
+    "Japan":1184.39,
+    "Russia":1661.01,
+    "United States":5195.42
+  },
+  {
+    "anio":2018,
+    "China":10346.79,
+    "India":2595.23,
+    "Japan":1138.55,
+    "Russia":1709.91,
+    "United States":5361.24
+  },
+  {
+    "anio":2019,
+    "China":10713.52,
+    "India":2611.17,
+    "Japan":1102.06,
+    "Russia":1704.46,
+    "United States":5235.91
+  },
+  {
+    "anio":2020,
+    "China":10896.52,
+    "India":2422.73,
+    "Japan":1037.28,
+    "Russia":1631.9,
+    "United States":4689.95
+  },
+  {
+    "anio":2021,
+    "China":11284.4,
+    "India":2675.78,
+    "Japan":1058.5,
+    "Russia":1674.52,
+    "United States":5020.11
+  },
+  {
+    "anio":2022,
+    "China":11711.81,
+    "India":2831.13,
+    "Japan":1029.64,
+    "Russia":1675.46,
+    "United States":5055.4
+  },
+  {
+    "anio":2023,
+    "China":12172.01,
+    "India":3062.76,
+    "Japan":986.91,
+    "Russia":1733.13,
+    "United States":4918.41
+  }
+]

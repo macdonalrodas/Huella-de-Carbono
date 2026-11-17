@@ -1,0 +1,142 @@
+[
+  {
+    "anio":2010,
+    "Africa":1216.28,
+    "Asia":16536.47,
+    "Europe":6117.36,
+    "North America":6851.85,
+    "Oceania":451.56,
+    "South America":1072.13,
+    "World":33317.67
+  },
+  {
+    "anio":2011,
+    "Africa":1264.91,
+    "Asia":17768.82,
+    "Europe":6044.34,
+    "North America":6757.27,
+    "Oceania":450.38,
+    "South America":1088.22,
+    "World":34479.99
+  },
+  {
+    "anio":2012,
+    "Africa":1263.52,
+    "Asia":18438.48,
+    "Europe":5998.6,
+    "North America":6565.68,
+    "Oceania":452.25,
+    "South America":1142.11,
+    "World":34954.74
+  },
+  {
+    "anio":2013,
+    "Africa":1280.57,
+    "Asia":18685.48,
+    "Europe":5840.1,
+    "North America":6708.86,
+    "Oceania":445.0,
+    "South America":1205.62,
+    "World":35275.82
+  },
+  {
+    "anio":2014,
+    "Africa":1360.82,
+    "Asia":18961.44,
+    "Europe":5609.14,
+    "North America":6754.71,
+    "Oceania":442.69,
+    "South America":1221.04,
+    "World":35465.7
+  },
+  {
+    "anio":2015,
+    "Africa":1335.95,
+    "Asia":19070.41,
+    "Europe":5613.45,
+    "North America":6592.76,
+    "Oceania":451.38,
+    "South America":1186.98,
+    "World":35403.53
+  },
+  {
+    "anio":2016,
+    "Africa":1367.23,
+    "Asia":19202.4,
+    "Europe":5598.05,
+    "North America":6453.53,
+    "Oceania":460.06,
+    "South America":1142.48,
+    "World":35392.83
+  },
+  {
+    "anio":2017,
+    "Africa":1377.32,
+    "Asia":19775.84,
+    "Europe":5632.42,
+    "North America":6397.04,
+    "Oceania":465.09,
+    "South America":1125.79,
+    "World":35974.61
+  },
+  {
+    "anio":2018,
+    "Africa":1391.19,
+    "Asia":20366.35,
+    "Europe":5613.85,
+    "North America":6576.29,
+    "Oceania":467.92,
+    "South America":1082.04,
+    "World":36734.0
+  },
+  {
+    "anio":2019,
+    "Africa":1456.08,
+    "Asia":20926.58,
+    "Europe":5437.2,
+    "North America":6463.36,
+    "Oceania":468.93,
+    "South America":1094.84,
+    "World":37086.57
+  },
+  {
+    "anio":2020,
+    "Africa":1369.25,
+    "Asia":20691.95,
+    "Europe":5025.68,
+    "North America":5798.35,
+    "Oceania":449.49,
+    "South America":983.97,
+    "World":35158.23
+  },
+  {
+    "anio":2021,
+    "Africa":1475.35,
+    "Asia":21520.5,
+    "Europe":5265.45,
+    "North America":6176.85,
+    "Oceania":439.1,
+    "South America":1110.53,
+    "World":36866.86
+  },
+  {
+    "anio":2022,
+    "Africa":1459.11,
+    "Asia":22237.81,
+    "Europe":5095.64,
+    "North America":6236.02,
+    "Oceania":433.49,
+    "South America":1100.03,
+    "World":37527.77
+  },
+  {
+    "anio":2023,
+    "Africa":1481.81,
+    "Asia":22997.09,
+    "Europe":4887.14,
+    "North America":6104.68,
+    "Oceania":433.18,
+    "South America":1107.39,
+    "World":38094.04
+  }
+]
