@@ -1,0 +1,21 @@
+/* Fila de KPIs: el principal ocupa el doble que los demás (como en el wireframe) */
+.fila {
+  display: grid;
+  grid-template-columns: 2.1fr repeat(4, 1fr);
+  gap: var(--espacio);
+}
+
+@media (max-width: 1100px) {
+  .fila {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .fila > :first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 720px) {
+  .fila {
+    grid-template-columns: 1fr;
+  }
+}

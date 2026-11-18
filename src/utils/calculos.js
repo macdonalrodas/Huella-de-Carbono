@@ -16,6 +16,7 @@
 //   países que tienen PIB, población y emisiones.
 // =========================================================
 import { continentePorClave } from "../lib/continentes";
+import { nombreEnEspanol } from "./nombres";
 import {
   ANIO_FIN,
   ANIO_INI,
@@ -36,7 +37,17 @@ const cambioPct = (inicio, fin) =>
 export function prepararBase(datos) {
   const continenteDe = Object.fromEntries(datos.paises.map((p) => [p.iso3, p.continente]));
 
-  const maestro = datos.maestro.map((f) => ({ ...f, continente: continenteDe[f.iso3] ?? null }));
+  // Nombres de países en español (los datos de OWID vienen en inglés)
+  const paises = datos.paises
+    .map((p) => ({ ...p, pais: nombreEnEspanol(p.iso3, p.pais) }))
+    .sort((a, b) => a.pais.localeCompare(b.pais, "es"));
+  const nombreDe = Object.fromEntries(paises.map((p) => [p.iso3, p.pais]));
+
+  const maestro = datos.maestro.map((f) => ({
+    ...f,
+    pais: nombreDe[f.iso3] ?? f.pais,
+    continente: continenteDe[f.iso3] ?? null,
+  }));
 
   const porAnio = {};
   const porPais = {};
@@ -56,10 +67,16 @@ export function prepararBase(datos) {
     poblacionMundial[anio] = suma(filas, (f) => f.poblacion);
   }
 
-  const variacion = datos.variacion.map((v) => ({ ...v, continente: continenteDe[v.iso3] ?? null }));
+  const variacion = datos.variacion.map((v) => ({
+    ...v,
+    pais: nombreDe[v.iso3] ?? v.pais,
+    continente: continenteDe[v.iso3] ?? null,
+  }));
 
   return {
     datos,
+    paises,
+    nombreDe,
     maestro,
     porAnio,
     porPais,
@@ -67,7 +84,6 @@ export function prepararBase(datos) {
     poblacionMundial,
     continenteDe,
     variacion,
-    nombreDe: Object.fromEntries(datos.paises.map((p) => [p.iso3, p.pais])),
   };
 }
 
@@ -178,7 +194,7 @@ export function mayorMejora(base, { continente }) {
 
   return {
     iso3: mejor.iso3,
-    pais: mejor.pais,
+    pais: mejor.pais, // ya en español
     variacionTotal: mejor.variacion_pct,
     co2InicioMt: mejor.co2_inicio_mt,
     co2FinMt: mejor.co2_fin_mt,

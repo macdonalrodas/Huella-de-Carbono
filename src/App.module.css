@@ -7,13 +7,6 @@
   gap: var(--espacio);
 }
 
-/* Fila de KPIs: el principal ocupa el doble que los demás */
-.kpis {
-  display: grid;
-  grid-template-columns: 2.1fr repeat(4, 1fr);
-  gap: var(--espacio);
-}
-
 /* Cuadrícula principal: columna ancha (2/3) y columna lateral (1/3) */
 .cuadricula {
   display: grid;
@@ -59,29 +52,8 @@
   color: var(--naranja);
 }
 
-/* Temporal: se reemplaza por los componentes de KPI en el paso 4 */
-.kpiTemporal {
-  background: var(--fondo-tarjeta);
-  border-radius: var(--radio);
-  box-shadow: var(--sombra);
-  min-height: 136px;
-  padding: 20px;
-  color: var(--texto-tenue);
-}
-
-.kpiPrincipal {
-  background: var(--verde-bosque);
-  color: #fff;
-}
-
-/* Pantallas medianas: KPIs en 2 columnas, gráficos en una sola */
+/* Pantallas medianas: gráficos en una sola columna */
 @media (max-width: 1100px) {
-  .kpis {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .kpis > :first-child {
-    grid-column: 1 / -1;
-  }
   .cuadricula {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -92,8 +64,5 @@
 @media (max-width: 720px) {
   .contenedor {
     padding: 20px;
-  }
-  .kpis {
-    grid-template-columns: 1fr;
   }
 }

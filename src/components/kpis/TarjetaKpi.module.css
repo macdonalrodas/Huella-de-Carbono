@@ -1,0 +1,116 @@
+.kpi {
+  background: var(--fondo-tarjeta);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.icono {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--verde-fondo);
+  color: var(--verde-bosque);
+}
+
+.insignia {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.reduccion {
+  background: var(--azul-fondo);
+  color: var(--azul);
+}
+
+.aumento {
+  background: var(--naranja-fondo);
+  color: var(--naranja);
+}
+
+.neutro {
+  background: var(--fondo-pagina);
+  color: var(--texto-secundario);
+}
+
+.etiqueta {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--texto-secundario);
+}
+
+.valor {
+  margin: 4px 0 0;
+  font-family: var(--fuente-titulos);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  overflow-wrap: anywhere;
+}
+
+.unidad {
+  font-family: var(--fuente-texto);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--texto-secundario);
+}
+
+.detalle {
+  margin: 6px 0 0;
+  font-size: 11px;
+  color: var(--texto-tenue);
+}
+
+/* KPI principal: fondo verde bosque, número más grande */
+.principal {
+  background: var(--verde-bosque);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(11, 93, 69, 0.25);
+}
+
+.principal .icono {
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+}
+
+.principal .insignia {
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+}
+
+.principal .etiqueta,
+.principal .unidad,
+.principal .detalle {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.principal .valor {
+  font-size: 46px;
+}
+
+.principal .unidad {
+  font-family: var(--fuente-titulos);
+  font-size: 28px;
+  font-weight: 800;
+  color: #fff;
+}

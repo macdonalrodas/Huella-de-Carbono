@@ -2,14 +2,12 @@ import { ANIOS, useFiltros } from "../../context/FiltrosContext";
 import { CONTINENTES } from "../../lib/continentes";
 import styles from "./Filtros.module.css";
 
-// paises: lista [{ iso3, pais, continente }] que viene de la tabla "paises"
+// paises: lista [{ iso3, pais, continente }] ya ordenada y con nombres en español
 export default function Filtros({ paises = [] }) {
   const { anio, setAnio, continente, setContinente, pais, setPais, restablecer } = useFiltros();
 
   // El selector de país solo muestra los países del continente elegido
-  const opcionesPais = paises
-    .filter((p) => continente === "todos" || p.continente === continente)
-    .sort((a, b) => a.pais.localeCompare(b.pais));
+  const opcionesPais = paises.filter((p) => continente === "todos" || p.continente === continente);
 
   return (
     <div className={styles.barra}>

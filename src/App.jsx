@@ -5,6 +5,7 @@ import { prepararBase, verificarConsistencia } from "./utils/calculos";
 import Header from "./components/layout/Header";
 import Filtros from "./components/layout/Filtros";
 import Tarjeta from "./components/layout/Tarjeta";
+import FilaKpis from "./components/kpis/FilaKpis";
 import styles from "./App.module.css";
 
 export default function App() {
@@ -24,17 +25,11 @@ export default function App() {
   return (
     <FiltrosProvider>
       <Header />
-      <Filtros paises={datos.paises} />
+      <Filtros paises={base.paises} />
 
       <main className={styles.contenedor}>
         {/* Fila 1: KPIs (el principal es más ancho, como en el wireframe) */}
-        <div className={styles.kpis}>
-          <div className={`${styles.kpiTemporal} ${styles.kpiPrincipal}`}>KPI principal</div>
-          <div className={styles.kpiTemporal}>CO₂ per cápita</div>
-          <div className={styles.kpiTemporal}>Variación 2010–2023</div>
-          <div className={styles.kpiTemporal}>Mayor mejora</div>
-          <div className={styles.kpiTemporal}>Intensidad de carbono</div>
-        </div>
+        <FilaKpis base={base} />
 
         {/* Filas 2 a 5: gráficos en dos columnas (2/3 y 1/3) */}
         <div className={styles.cuadricula}>
