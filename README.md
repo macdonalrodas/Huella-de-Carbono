@@ -9,7 +9,7 @@
 
 ## 🔗 Dashboard publicado
 
-**[Ver el dashboard](https://TU-ENLACE.vercel.app)**
+**[Ver el dashboard](https://huella-de-carbono-tau.vercel.app/)**
 
 ## 📊 KPIs
 
