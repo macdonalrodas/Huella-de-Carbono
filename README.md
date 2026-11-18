@@ -11,7 +11,7 @@
 
 **[Ver el dashboard](https://huella-de-carbono-tau.vercel.app/)**
 
-## 📊 KPIs
+##  KPIs
 
 | KPI | Gráfico |
 |---|---|
@@ -35,7 +35,7 @@ Además incluye emisiones por continente, contribución por sector y cambio de t
 | Google Colab (pandas) | Limpieza y procesamiento de los datos |
 | Vercel | Despliegue |
 
-## 📁 Estructura
+##  Estructura
 
 ```
 ├── data/
@@ -55,7 +55,7 @@ Además incluye emisiones por continente, contribución por sector y cambio de t
     └── utils/            # Cálculos de KPIs, configuración y formato
 ```
 
-## 🗄️ Datos
+##  Datos
 
 Fuente: [Our World in Data](https://ourworldindata.org/co2-emissions)
 
@@ -68,7 +68,7 @@ Fuente: [Our World in Data](https://ourworldindata.org/co2-emissions)
 
 **Proceso:** los datos se limpiaron en Google Colab (filtro de países por código ISO3, recorte a 2010–2023, cálculo de KPIs), se exportaron a CSV y se cargaron como tablas en Supabase. El dashboard las consulta con `@supabase/supabase-js`.
 
-## ▶️ Ejecutar localmente
+##  Ejecutar localmente
 
 1. Clonar el repositorio e instalar dependencias:
 
