@@ -1,0 +1,55 @@
+.contenido {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: end;
+}
+
+.cifra {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-width: 150px;
+}
+
+.cifra strong {
+  font-family: var(--fuente-titulos);
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--naranja);
+  line-height: 1.1;
+}
+
+.cifra span {
+  font-size: 11px;
+  color: var(--texto-secundario);
+}
+
+.cifra .cambio {
+  margin-top: 4px;
+  font-weight: 600;
+  color: var(--naranja);
+}
+
+.curva {
+  min-width: 0;
+}
+
+.ejes {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: var(--texto-tenue);
+  padding: 2px 8px 0;
+}
+
+.periodo {
+  color: var(--naranja);
+  font-weight: 600;
+}
+
+.fuente {
+  margin: 10px 0 0;
+  font-size: 10px;
+  color: var(--texto-tenue);
+}

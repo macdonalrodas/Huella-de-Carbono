@@ -11,6 +11,8 @@ import GraficoMejora from "./components/graficos/GraficoMejora";
 import MapaPerCapita from "./components/mapa/MapaPerCapita";
 import GraficoVariacion from "./components/graficos/GraficoVariacion";
 import GraficoPib from "./components/graficos/GraficoPib";
+import TarjetaTemperatura from "./components/graficos/TarjetaTemperatura";
+import TarjetaNotas from "./components/graficos/TarjetaNotas";
 import styles from "./App.module.css";
 
 export default function App() {
@@ -44,8 +46,8 @@ export default function App() {
           <GraficoVariacion base={base} />
           <GraficoPib base={base} />
           <div className={styles.columnaApilada} style={{ gridArea: "lateral" }}>
-            <Tarjeta titulo="Cambio de temperatura global" />
-            <Tarjeta titulo="Notas y cobertura" />
+            <TarjetaTemperatura base={base} />
+            <TarjetaNotas base={base} />
           </div>
           <Tarjeta area="continentes" titulo="Emisiones por continente" subtitulo="Evolución anual de emisiones de CO₂ · 2010–2023" etiqueta="2010–2023" />
           <Tarjeta area="sectores" titulo="Contribución por sector" subtitulo="Participación en emisiones globales" />
