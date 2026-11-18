@@ -8,6 +8,7 @@ import Tarjeta from "./components/layout/Tarjeta";
 import FilaKpis from "./components/kpis/FilaKpis";
 import GraficoTop5 from "./components/graficos/GraficoTop5";
 import GraficoMejora from "./components/graficos/GraficoMejora";
+import MapaPerCapita from "./components/mapa/MapaPerCapita";
 import styles from "./App.module.css";
 
 export default function App() {
@@ -37,7 +38,7 @@ export default function App() {
         <div className={styles.cuadricula}>
           <GraficoTop5 base={base} />
           <GraficoMejora base={base} />
-          <Tarjeta area="mapa" titulo="CO₂ per cápita por país" subtitulo="Distribución mundial por clases · toneladas por habitante" />
+          <MapaPerCapita base={base} />
           <Tarjeta area="variacion" titulo="Variación 2010–2023" subtitulo="Cambio porcentual de las emisiones por país" />
           <Tarjeta area="pib" titulo="PIB y emisiones" subtitulo="PIB per cápita vs. CO₂ per cápita · escala logarítmica" />
           <div className={styles.columnaApilada} style={{ gridArea: "lateral" }}>
