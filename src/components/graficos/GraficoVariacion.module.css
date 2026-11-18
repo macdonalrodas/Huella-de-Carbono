@@ -1,0 +1,48 @@
+.selector {
+  width: 100%;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-chico);
+  padding: 9px 12px;
+  margin-bottom: 14px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.selector:focus {
+  outline: none;
+  border-color: var(--verde-bosque);
+  box-shadow: 0 0 0 3px var(--verde-fondo);
+}
+
+.leyenda {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--texto-secundario);
+}
+
+.leyenda span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.leyenda i {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.nota {
+  margin: 6px 0 0;
+  text-align: center;
+  font-size: 10px;
+  color: var(--texto-tenue);
+}
+
+.vacio {
+  color: var(--texto-secundario);
+  font-size: 13px;
+}
