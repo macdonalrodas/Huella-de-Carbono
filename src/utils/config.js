@@ -22,19 +22,19 @@ export const GRUPOS_SECTOR = [
   {
     clave: "electricidad",
     nombre: "Electricidad y calor",
-    color: "var(--verde-bosque)",
+    color: "#0b5d45",
     columnas: ["electricity_and_heat_co2_emissions"],
   },
   {
     clave: "transporte",
     nombre: "Transporte",
-    color: "var(--verde-medio)",
+    color: "#6fa58f",
     columnas: ["transport_co2_emissions", "aviation_and_shipping_co2_emissions"],
   },
   {
     clave: "industria",
     nombre: "Industria y otros",
-    color: "var(--verde-claro)",
+    color: "#b9d3c7",
     columnas: [
       "manufacturing_and_construction_co2_emissions",
       "industry_co2_emissions",
