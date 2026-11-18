@@ -1,0 +1,58 @@
+.cifra {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: -6px 0 4px;
+  text-align: right;
+}
+
+.cifra strong {
+  font-family: var(--fuente-titulos);
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--azul);
+  line-height: 1.1;
+}
+
+.cifra span {
+  font-size: 11px;
+  color: var(--texto-tenue);
+}
+
+.cifra .nota {
+  color: var(--texto-secundario);
+}
+
+.leyenda {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 10px;
+  font-size: 11px;
+  color: var(--texto-secundario);
+}
+
+.leyenda span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lineaPais,
+.lineaMundo {
+  display: inline-block;
+  width: 22px;
+}
+
+.lineaPais {
+  border-top: 3px solid var(--azul);
+}
+
+.lineaMundo {
+  border-top: 2px dashed var(--texto-tenue);
+}
+
+.vacio {
+  color: var(--texto-secundario);
+  font-size: 13px;
+}
