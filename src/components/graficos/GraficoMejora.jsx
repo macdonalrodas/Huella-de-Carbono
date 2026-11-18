@@ -42,7 +42,7 @@ export default function GraficoMejora({ base }) {
       </div>
 
       <ResponsiveContainer width="100%" height={250}>
-        <ComposedChart data={serie} margin={{ top: 22, right: 24, bottom: 0, left: 0 }}>
+        <ComposedChart data={serie} margin={{ top: 22, right: 24, bottom: 8, left: 0 }}>
           <CartesianGrid stroke={COLORES.rejilla} vertical={false} />
           <XAxis
             dataKey="anio"
@@ -116,7 +116,7 @@ function PuntoExtremo({ cx, cy, value, index, mostrar }) {
       <circle cx={cx} cy={cy} r={6} fill="#fff" stroke={COLORES.azul} strokeWidth={3} />
       <text
         x={cx}
-        y={cy - 12}
+        y={index === 0 ? cy - 12 : cy + 22}
         textAnchor={index === 0 ? "start" : "end"}
         fontSize={11}
         fontWeight={600}

@@ -29,7 +29,7 @@ export default function GraficoTop5({ base }) {
         {/* Gráfico de líneas */}
         <div className={styles.grafico}>
           <ResponsiveContainer width="100%" height={330}>
-            <LineChart data={serie} margin={{ top: 10, right: 110, bottom: 0, left: 0 }}>
+            <LineChart data={serie} margin={{ top: 24, right: 135, bottom: 0, left: 0 }}>
               <CartesianGrid stroke={COLORES.rejilla} />
               <XAxis
                 dataKey="anio"
@@ -44,7 +44,7 @@ export default function GraficoTop5({ base }) {
                 tickFormatter={(v) => `${numero(v)}`}
                 tickLine={false}
                 axisLine={false}
-                label={{ value: "Mt", position: "insideTopLeft", offset: 0, dy: -8, fontSize: 11, fill: COLORES.textoTenue }}
+                label={{ value: "Mt", position: "top", offset: 12, fontSize: 11, fill: COLORES.textoTenue }}
               />
               <Tooltip
                 content={({ active, payload, label }) =>

@@ -53,7 +53,7 @@
 }
 
 /* Pantallas medianas: gráficos en una sola columna */
-@media (max-width: 1100px) {
+@media (max-width: 960px) {
   .cuadricula {
     grid-template-columns: 1fr;
     grid-template-areas:

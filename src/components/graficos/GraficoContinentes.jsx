@@ -15,11 +15,25 @@ export default function GraficoContinentes({ base }) {
   const ultimo = serie.length - 1;
   const hayDestacado = continente !== "todos";
 
+  // Separación vertical de las etiquetas finales cuando dos continentes
+  // terminan con valores parecidos (por ejemplo, Norteamérica y Europa)
+  const desplazamiento = {};
+  const finales = CONTINENTES.map((c) => ({ clave: c.clave, valor: serie[ultimo]?.[c.clave] ?? 0 })).sort(
+    (a, b) => b.valor - a.valor
+  );
+  finales.forEach((f, i) => {
+    const anterior = finales[i - 1];
+    if (anterior && anterior.valor / f.valor < 1.6) {
+      desplazamiento[anterior.clave] = (desplazamiento[anterior.clave] ?? 0) - 6;
+      desplazamiento[f.clave] = (desplazamiento[f.clave] ?? 0) + 6;
+    }
+  });
+
   return (
     <Tarjeta
       area="continentes"
       titulo="Emisiones por continente"
-      subtitulo="Evolución anual de emisiones de CO₂ · 2010–2023"
+      subtitulo="Evolución anual de emisiones de CO₂ · 2010–2023 · escala logarítmica"
       accion={
         <div className={styles.leyenda}>
           {CONTINENTES.map((c) => (
@@ -32,7 +46,7 @@ export default function GraficoContinentes({ base }) {
       }
     >
       <ResponsiveContainer width="100%" height={300}>
-        <LineChart data={serie} margin={{ top: 10, right: 56, bottom: 0, left: 0 }}>
+        <LineChart data={serie} margin={{ top: 24, right: 56, bottom: 0, left: 0 }}>
           <CartesianGrid stroke={COLORES.rejilla} />
           <XAxis
             dataKey="anio"
@@ -43,11 +57,15 @@ export default function GraficoContinentes({ base }) {
           />
           <YAxis
             width={60}
+            scale="log"
+            domain={[300, 30000]}
+            ticks={[500, 1000, 2000, 5000, 10000, 20000]}
+            allowDataOverflow
             tick={{ fontSize: 11, fill: COLORES.textoTenue }}
             tickFormatter={(v) => numero(v)}
             tickLine={false}
             axisLine={false}
-            label={{ value: "Mt", position: "insideTopLeft", offset: 0, dy: -8, fontSize: 11, fill: COLORES.textoTenue }}
+            label={{ value: "Mt", position: "top", offset: 12, fontSize: 11, fill: COLORES.textoTenue }}
           />
           <Tooltip
             content={({ active, payload, label }) =>
@@ -85,6 +103,7 @@ export default function GraficoContinentes({ base }) {
                     color={c.hex}
                     texto={`${c.letra} ${subio ? "▲" : "▼"}`}
                     atenuada={atenuada}
+                    dy={desplazamiento[c.clave] ?? 0}
                   />
                 )}
               />
@@ -96,12 +115,12 @@ export default function GraficoContinentes({ base }) {
   );
 }
 
-function Final({ cx, cy, esUltimo, color, texto, atenuada }) {
+function Final({ cx, cy, esUltimo, color, texto, atenuada, dy }) {
   if (!esUltimo || cx == null || cy == null) return <g />;
   return (
     <g opacity={atenuada ? 0.3 : 1}>
       <circle cx={cx} cy={cy} r={4.5} fill={color} stroke="#fff" strokeWidth={2} />
-      <text x={cx + 9} y={cy} dy={4} fontSize={11} fontWeight={700} fill={color}>
+      <text x={cx + 9} y={cy + dy} dy={4} fontSize={11} fontWeight={700} fill={color}>
         {texto}
       </text>
     </g>
