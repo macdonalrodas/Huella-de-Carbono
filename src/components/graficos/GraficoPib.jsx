@@ -1,5 +1,5 @@
 import { CartesianGrid, ResponsiveContainer, Scatter, ScatterChart, Tooltip, XAxis, YAxis } from "recharts";
-import { useFiltros } from "../../context/FiltrosContext";
+import { useFiltros } from "../../context/filtros";
 import { COLORES } from "../../lib/colores";
 import { CONTINENTES, continentePorClave } from "../../lib/continentes";
 import { datosDispersion } from "../../utils/calculos";

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { GeoJSON, MapContainer } from "react-leaflet";
-import { ANIOS, useFiltros } from "../../context/FiltrosContext";
+import { ANIOS, useFiltros } from "../../context/filtros";
 import { COLORES } from "../../lib/colores";
 import { claseMapa, datosMapa } from "../../utils/calculos";
 import { CORTES_MAPA } from "../../utils/config";

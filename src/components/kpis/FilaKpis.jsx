@@ -1,4 +1,4 @@
-import { useFiltros } from "../../context/FiltrosContext";
+import { useFiltros } from "../../context/filtros";
 import {
   intensidad,
   kpiAnual,

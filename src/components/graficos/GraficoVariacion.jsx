@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Bar, BarChart, CartesianGrid, Cell, LabelList, ReferenceLine, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { useFiltros } from "../../context/FiltrosContext";
+import { useFiltros } from "../../context/filtros";
 import { COLORES, reduccionAumento } from "../../lib/colores";
 import { datosVariacion, MODOS_VARIACION } from "../../utils/calculos";
 import { UMBRAL_MT } from "../../utils/config";

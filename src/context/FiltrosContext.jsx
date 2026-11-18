@@ -1,11 +1,7 @@
-import { createContext, useContext, useState } from "react";
+import { useState } from "react";
+import { ANIO_INICIAL, FiltrosContext } from "./filtros";
 
-// Valores iniciales de los filtros globales
-export const ANIO_INICIAL = 2023;
-export const ANIOS = Array.from({ length: 14 }, (_, i) => 2010 + i); // 2010–2023
-
-const FiltrosContext = createContext(null);
-
+// Proveedor de los filtros globales: año, continente y país
 export function FiltrosProvider({ children }) {
   const [anio, setAnio] = useState(ANIO_INICIAL);
   const [continente, setContinente] = useState("todos");
@@ -31,8 +27,4 @@ export function FiltrosProvider({ children }) {
       {children}
     </FiltrosContext.Provider>
   );
-}
-
-export function useFiltros() {
-  return useContext(FiltrosContext);
 }

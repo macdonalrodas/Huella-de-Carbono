@@ -1,5 +1,5 @@
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { useFiltros } from "../../context/FiltrosContext";
+import { useFiltros } from "../../context/filtros";
 import { COLORES } from "../../lib/colores";
 import { nombreAmbito, top5 } from "../../utils/calculos";
 import { numero } from "../../utils/formato";

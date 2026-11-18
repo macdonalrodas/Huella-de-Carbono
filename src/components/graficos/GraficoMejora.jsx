@@ -1,5 +1,5 @@
 import { Area, CartesianGrid, ComposedChart, Line, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { useFiltros } from "../../context/FiltrosContext";
+import { useFiltros } from "../../context/filtros";
 import { COLORES } from "../../lib/colores";
 import { mayorMejora } from "../../utils/calculos";
 import { numero, porcentaje } from "../../utils/formato";

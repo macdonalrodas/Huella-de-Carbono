@@ -1,5 +1,5 @@
 import { Area, AreaChart, ReferenceArea, ReferenceDot, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { useFiltros } from "../../context/FiltrosContext";
+import { useFiltros } from "../../context/filtros";
 import { COLORES } from "../../lib/colores";
 import { datosTemperatura } from "../../utils/calculos";
 import { ANIO_FIN, ANIO_INI } from "../../utils/config";

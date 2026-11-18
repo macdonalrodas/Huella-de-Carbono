@@ -1,4 +1,4 @@
-import { ANIOS, useFiltros } from "../../context/FiltrosContext";
+import { ANIOS, useFiltros } from "../../context/filtros";
 import { CONTINENTES } from "../../lib/continentes";
 import styles from "./Filtros.module.css";
 

@@ -301,8 +301,9 @@ export function datosDispersion(base, anio, { continente, pais }) {
 export function datosContinentes(base) {
   const serie = [];
   for (let anio = ANIO_INI; anio <= ANIO_FIN; anio++) {
-    const { World, ...resto } = base.regionPorAnio[anio] ?? {};
-    serie.push({ anio, ...resto });
+    const fila = { anio, ...(base.regionPorAnio[anio] ?? {}) };
+    delete fila.World; // el total mundial no es un continente
+    serie.push(fila);
   }
   return serie;
 }
