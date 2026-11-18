@@ -10,6 +10,7 @@ import GraficoTop5 from "./components/graficos/GraficoTop5";
 import GraficoMejora from "./components/graficos/GraficoMejora";
 import MapaPerCapita from "./components/mapa/MapaPerCapita";
 import GraficoVariacion from "./components/graficos/GraficoVariacion";
+import GraficoPib from "./components/graficos/GraficoPib";
 import styles from "./App.module.css";
 
 export default function App() {
@@ -41,7 +42,7 @@ export default function App() {
           <GraficoMejora base={base} />
           <MapaPerCapita base={base} />
           <GraficoVariacion base={base} />
-          <Tarjeta area="pib" titulo="PIB y emisiones" subtitulo="PIB per cápita vs. CO₂ per cápita · escala logarítmica" />
+          <GraficoPib base={base} />
           <div className={styles.columnaApilada} style={{ gridArea: "lateral" }}>
             <Tarjeta titulo="Cambio de temperatura global" />
             <Tarjeta titulo="Notas y cobertura" />

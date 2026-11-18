@@ -1,0 +1,40 @@
+.leyenda {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 11px;
+  color: var(--texto-secundario);
+  margin-bottom: 4px;
+}
+
+.leyenda span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.leyenda i {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  font-style: normal;
+  font-size: 9px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.pie {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 10px;
+  color: var(--texto-tenue);
+}
+
+.pie span:last-child {
+  font-weight: 600;
+  color: var(--texto-secundario);
+}
