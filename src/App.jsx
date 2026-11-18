@@ -1,22 +1,30 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo } from "react";
 import { FiltrosProvider } from "./context/FiltrosContext";
-import { traerTabla } from "./lib/supabase";
+import { useDatos } from "./hooks/useDatos";
+import { prepararBase, verificarConsistencia } from "./utils/calculos";
 import Header from "./components/layout/Header";
 import Filtros from "./components/layout/Filtros";
 import Tarjeta from "./components/layout/Tarjeta";
 import styles from "./App.module.css";
 
 export default function App() {
-  const [paises, setPaises] = useState([]);
+  const { datos, cargando, error } = useDatos();
 
+  // Índices y lookups: se calculan una sola vez cuando llegan los datos
+  const base = useMemo(() => (datos ? prepararBase(datos) : null), [datos]);
+
+  // Compara los KPIs calculados en React con los de Colab (ver consola)
   useEffect(() => {
-    traerTabla("paises").then(setPaises).catch(console.error);
-  }, []);
+    if (base) verificarConsistencia(base);
+  }, [base]);
+
+  if (cargando) return <Estado mensaje="Cargando datos desde Supabase…" />;
+  if (error) return <Estado mensaje={`No se pudieron cargar los datos: ${error}`} error />;
 
   return (
     <FiltrosProvider>
       <Header />
-      <Filtros paises={paises} />
+      <Filtros paises={datos.paises} />
 
       <main className={styles.contenedor}>
         {/* Fila 1: KPIs (el principal es más ancho, como en el wireframe) */}
@@ -48,5 +56,14 @@ export default function App() {
         Fuente: Our World in Data · Datos procesados 2010–2023
       </footer>
     </FiltrosProvider>
+  );
+}
+
+function Estado({ mensaje, error }) {
+  return (
+    <>
+      <Header />
+      <div className={`${styles.estado} ${error ? styles.estadoError : ""}`}>{mensaje}</div>
+    </>
   );
 }

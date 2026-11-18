@@ -45,6 +45,20 @@
   border-top: 1px solid var(--borde);
 }
 
+/* Pantalla de carga o error */
+.estado {
+  max-width: var(--ancho-max);
+  margin: 80px auto;
+  padding: 0 40px;
+  text-align: center;
+  color: var(--texto-secundario);
+  font-size: 15px;
+}
+
+.estadoError {
+  color: var(--naranja);
+}
+
 /* Temporal: se reemplaza por los componentes de KPI en el paso 4 */
 .kpiTemporal {
   background: var(--fondo-tarjeta);
