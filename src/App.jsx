@@ -4,7 +4,6 @@ import { useDatos } from "./hooks/useDatos";
 import { prepararBase, verificarConsistencia } from "./utils/calculos";
 import Header from "./components/layout/Header";
 import Filtros from "./components/layout/Filtros";
-import Tarjeta from "./components/layout/Tarjeta";
 import FilaKpis from "./components/kpis/FilaKpis";
 import GraficoTop5 from "./components/graficos/GraficoTop5";
 import GraficoMejora from "./components/graficos/GraficoMejora";
@@ -13,6 +12,8 @@ import GraficoVariacion from "./components/graficos/GraficoVariacion";
 import GraficoPib from "./components/graficos/GraficoPib";
 import TarjetaTemperatura from "./components/graficos/TarjetaTemperatura";
 import TarjetaNotas from "./components/graficos/TarjetaNotas";
+import GraficoContinentes from "./components/graficos/GraficoContinentes";
+import GraficoSectores from "./components/graficos/GraficoSectores";
 import styles from "./App.module.css";
 
 export default function App() {
@@ -49,8 +50,8 @@ export default function App() {
             <TarjetaTemperatura base={base} />
             <TarjetaNotas base={base} />
           </div>
-          <Tarjeta area="continentes" titulo="Emisiones por continente" subtitulo="Evolución anual de emisiones de CO₂ · 2010–2023" etiqueta="2010–2023" />
-          <Tarjeta area="sectores" titulo="Contribución por sector" subtitulo="Participación en emisiones globales" />
+          <GraficoContinentes base={base} />
+          <GraficoSectores base={base} />
         </div>
       </main>
 
